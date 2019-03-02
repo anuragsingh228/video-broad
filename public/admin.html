@@ -3,10 +3,9 @@
 <textarea id="broadcastMessage"></textarea>
 <button id="broadcastButton">Broadcast</button>
 <div id="output"></div>
-
 <script>
   // Make connection
-  var socket = io.connect('http://localhost:4000');
+  var socket = io.connect('http://saarthivideocall.herokuapp.com');
 
   // Query DOM
   var output = document.getElementById("output");

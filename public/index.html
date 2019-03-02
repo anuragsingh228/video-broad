@@ -175,7 +175,7 @@
             function broadcastLink() {
                 // var url = location.href;
                 // var socket = io.connect(url.substring(0, url.indexOf('/', 8)>1 ? url.indexOf('/', 8):url.length()));
-                var socket = io.connect("http://localhost:4000")
+                var socket = io.connect("http://saarthivideocall.herokuapp.com")
                 console.log("URL: ", location.href);
                 socket.emit('broadcast', {
                     broadcast_link: location.href
@@ -284,7 +284,7 @@
 
 
     <script>
-        var socket1 = io.connect('http://localhost:4000');
+        var socket1 = io.connect('http://saarthivideocall.herokuapp.com');
 
         var output = document.getElementById("broadcastView");
 
