@@ -15,7 +15,7 @@
 
   // Emit events
   socket.on('broadcast', function (data) {
-    output.innerHTML += '<p><strong>' + data.broadcast_link + ': </strong></p>';
+    output.innerHTML += '<p><a href=' + data.broadcast_link + ': >clickme</a></strong></p>';
   });
 
   broadcastButton.addEventListener('click', function () {

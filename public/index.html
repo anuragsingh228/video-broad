@@ -44,8 +44,8 @@
                 font-size: 2em;
                 margin: .2em;
                 width: 30%;
-                opacity: 0.5;
-                background-color: aquamarine;
+                opacity: 0.8;
+                background-color: white;
             }
 
             .setup {
@@ -68,6 +68,10 @@
             }
 
             .highlight { color: rgb(0, 8, 189); }
+           #broadcastView{
+               background-color: rgb(32, 204, 89);
+               width: 30%;
+           }
             
         </style>
     <script>
@@ -80,6 +84,7 @@
     <script src="https://cdn.webrtc-experiment.com/socket.io.js"> </script>
     <script src="https://cdn.webrtc-experiment.com/IceServersHandler.js"></script>
     <script src="https://cdn.webrtc-experiment.com/socket.io/PeerConnection.js"> </script>
+
 </head>
 
 <body>
@@ -263,7 +268,7 @@
             (function () {
                 var uniqueToken = document.getElementById('unique-token');
                 if (uniqueToken)
-                    if (location.hash.length > 2) uniqueToken.parentNode.parentNode.parentNode.innerHTML = '<h2  style="text-align:center;"><a style="color:red;" href="' + location.href + '" target="_blank">Share this link</a></h2>';
+                    if (location.hash.length > 2) uniqueToken.parentNode.parentNode.parentNode.innerHTML = '<h2  style="text-align:center; display:none;"><a style="color:red;" href="' + location.href + '" target="_blank">Share this link</a></h2>';
                     else uniqueToken.innerHTML = uniqueToken.parentNode.parentNode.href = '#' + (Math.random() * new Date().getTime()).toString(36).toUpperCase().replace(/\./g, '-');
             })();
 
@@ -274,7 +279,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
     <!-- <script src="broadcast.js"></script> -->
 
-    <div id="broadcastView">view of broadcast</div>
+    <div id="broadcastView"></div>
+
+
 
     <script>
         var socket1 = io.connect('http://localhost:4000');
