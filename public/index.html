@@ -28,52 +28,69 @@
 
 
     <style>
-        audio, video {
-                -moz-transition: all 1s ease;
-                -ms-transition: all 1s ease;
+        audio,
+        video {
+            -moz-transition: all 1s ease;
+            -ms-transition: all 1s ease;
 
-                -o-transition: all 1s ease;
-                -webkit-transition: all 1s ease;
-                transition: all 1s ease;
-                vertical-align: top;
-            }
+            -o-transition: all 1s ease;
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+            vertical-align: top;
+        }
 
-            input {
-                border: 1px solid #d9d9d9;
-                border-radius: 1px;
-                font-size: 2em;
-                margin: .2em;
-                width: 30%;
-                opacity: 0.8;
-                background-color: white;
-            }
+        input {
+            border: 1px solid #d9d9d9;
+            border-radius: 1px;
+            font-size: 2em;
+            margin: .2em;
+            margin-right: 8%;
+            width: 58%;
+            opacity: 0.8;
+            background-color: white;
+        }
 
-            .setup {
-                border-bottom-left-radius: 0;
-                border-top-left-radius: 0;
-                font-size: 102%;
-                height: 47px;
-                margin-left: -9px;
-                margin-top: 8px;
-                position: absolute;
-                cursor: pointer;
-            }
+        .description {
+            text-align: center;
+            width: 70%;
+            color: aliceblue;
+        }
 
-            p { padding: 1em; }
+        .main-hd {
+            margin-top: 5%;
+            color: #fda602
+        }
 
-            li {
-                border-bottom: 1px solid rgb(189, 189, 189);
-                border-left: 1px solid rgb(189, 189, 189);
-                padding: .5em;
-            }
+        .setup {
+            border-bottom-left-radius: 0;
+            border-top-left-radius: 0;
+            font-size: 102%;
+            height: 47px;
+            margin-left: -9px;
+            margin-top: 8px;
+            position: absolute;
+            cursor: pointer;
+        }
 
-            .highlight { color: rgb(0, 8, 189); }
-           #broadcastView{
-               background-color: rgb(32, 204, 89);
-               width: 30%;
-           }
-            
-        </style>
+        p {
+            padding: 1em;
+        }
+
+        li {
+            border-bottom: 1px solid rgb(189, 189, 189);
+            border-left: 1px solid rgb(189, 189, 189);
+            padding: .5em;
+        }
+
+        .highlight {
+            color: rgb(0, 8, 189);
+        }
+
+        #broadcastView {
+            background-color: rgb(249, 166, 2);
+            width: 100%;
+        }
+    </style>
     <script>
         document.createElement('article');
         document.createElement('footer');
@@ -88,17 +105,34 @@
 </head>
 
 <body>
+
+    <center>
+        <div class="main-hd">
+            <h1>Get Yourself connected to the Remote supporting staff</h1>
+        </div>
+        <div class="description">
+            <p>WebRTC stands for web real-time communications. It is a very exciting, powerful, and highly disruptive
+                cutting-edge technology and standard. WebRTC leverages a set of plugin-free APIs that can be used in
+                both desktop and mobile browsers, and is progressively becoming supported by all major modern browser
+                vendors. Previously, external plugins were required in order to achieve similar functionality as is
+                offered by WebRTC.
+
+            </p>
+        </div>
+    </center>
     <article>
         <section class="experiment">
             <section>
                 <span>
-                    Private ?? <a href="/socket.io/" target="_blank" title="Setup Private Room!"><code><strong id="unique-token">#123456789</strong></code></a>
+                    Private ?? <a href="/socket.io/" target="_blank"
+                        title="Setup Private Room!"><code><strong id="unique-token">#123456789</strong></code></a>
                 </span>
                 <input type="text" id="your-name" placeholder="your-name">
-                <button id="start-broadcasting" class="setup">Start Transmitting Yourself!</button>
+                <button id="start-broadcasting" class="setup">Start Transmitting</button>
             </section>
             <table id="rooms-list" style="width: 100%;"></table>
             <div id="videos-container"></div>
+
         </section>
         <script>
             var channel = location.href.replace(/\/|:|#|%|\.|\[|\]/g, '');
@@ -279,7 +313,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
     <!-- <script src="broadcast.js"></script> -->
 
-    <div id="broadcastView"></div>
+    ><center>
+        <div id="broadcastView">
+            <h1>Important informations -</h1>
+        </div>
+    </center>
 
 
 
@@ -296,6 +334,9 @@
 
 
     </script>
+    <center>
+        <p style="color:beige;">&copy; Team Cognito</p>
+    </center>
 </body>
 
 </html>
